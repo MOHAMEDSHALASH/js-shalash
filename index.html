@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - CODING</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <!-- fonts and librarys -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik+Iso&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.js"></script>
+</head>
+<body>
+<!-- =============== START STARS IN BACKGROUND =============  -->
+<div class="stars">
+    <img src="image/bg-stars-1.webp" alt="">
+</div>
+<!-- =============== END STARS IN BACKGROUND =============  -->
+
+<!-- =============== START LOADING =============  -->
+<div class="loading" id="loading">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<!-- =============== END LOADING =============  -->
+
+<!-- =============== START HEADER =============  -->
+<header>
+    <div class="search">
+        <div class="lang" id="lang">EN</div>
+        <div class="icon-search"><i class="fa-solid fa-magnifying-glass fa-bounce"></i></div>
+        <input onkeyup="search()" class="searchInput" id="searchInput" type="text" placeholder="click to search ">
+    </div>
+    <div class="logo"><h3>JS <span>Coding</span></h3></div>
+</header>
+<!-- =============== END HEADER =============  -->
+
+<!-- =============== START MAIN PAGE =============  -->
+<main>
+    <div class="container">
+        <div class="title t1"><h4>When need click in any item to show OR hide something :</h4></div>
+        <div class="box">
+            <textarea readonly>
+                document.querySelector("#exit2").addEventListener("click", () => {
+                document.querySelector(".sign").classList.toggle("sign-show");
+                });</textarea>
+                <button class="btnCopy" type="submit">copy</button>
+                <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/1.mp3" controls></audio>
+            </div>
+        </div>
+        <div class="box">
+            <textarea readonly>
+                Div1.onclick=function(){
+                    if(div2.classList.contains('search')){
+                        div2.classList='search-show';
+                    }
+                    else{
+                        div2.classList='search';
+                    }
+                }        
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <!-- <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/1.mp3" controls></audio>
+            </div> -->
+        </div>
+
+    </div>
+    <!-- ==== -->
+    <div class="container">
+        <div class="title t2"><h4>When need to make document  auto write in page :</h4></div>
+        <div class="box notFree">
+            <textarea readonly>
+                let x=1;
+                const autoWrite=document.getElementById('auto');
+                const autowritee=()=>{
+                const title="Mohamed Shalash  . I'm from TANTA   ."
+                mpo.innerText=title.slice(0,x);
+                x++;
+                if(title.length<x){
+                x=1;
+            }
+            };
+            const stoop=setInterval(autowritee,300);
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/1.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ==== -->
+    <div class="container">
+        <div class="title t3"><h4>When scroll in page :</h4></div>
+        <div class="box">
+            <textarea readonly>
+                window.onscroll=function(){
+                    if(scrollY>=630){
+                        item.style.backgroundColor="#f3f3f3";
+                    }
+                    else{
+                        item.style.backgroundColor="#fff";
+                    }
+                
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/scroll.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ===== -->
+    <div class="container">
+        <div class="title t4"><h4>TO set OR remove attribute :</h4></div>
+        <div class="box">
+            <textarea readonly>
+                Div1.setAttribute("class","active")
+                Div1.removeAttribute("class")    
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/attribute.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ===== -->
+    <div class="container">
+        <div class="title t5"><h4>Element “ on ” that I use :</h4></div>
+        <div class="box">
+            <textarea readonly>
+                Onclick  >     ضغطه
+                Onscroll   >     النزول والطلوع في صفحه           
+                Onmouseover  >       لما المس حاجه دون النقر     
+                Onmouseout   >            عكس ال فوقها          
+                Onkeyup   >                                         اول مكتب ف الانبوت               
+                Onkeydown  >   عكس ال فوقها               
+                Ondblclick >     	عند النقر مرتين
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/element on.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ===== -->
+    <div class="container">
+        <div class="title t6"><h4>Search in your web site :</h4></div>
+        <div class="box notFree">
+            <textarea readonly>
+                function search(){
+                    let searchbar=document.querySelector('.searchInput').value.toUpperCase();
+                    let product=document.querySelectorAll('main .container');
+                    let productContainer=document.querySelector('main')
+                    let productName=document.querySelectorAll('main .container .title h4');
+                    for(i=0; i<productName.length;i++){
+                        if(productName[i].innerHTML.toUpperCase().indexOf(searchbar)>=0){
+                            product[i].style.display="block";
+                        }
+                        else{
+                            product[i].style.display="none";
+                        }
+                    }
+                }
+                search()
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/1.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ===== -->
+    <div class="container">
+        <div class="title t7"><h4>Use MIC : the record ! -</h4></div>
+        <div class="box notFree">
+            <textarea readonly>
+                record.onclick=()=>{
+                    let speech=true;
+                    window.SpeechRecognition= window.webkitSpeechRecognition;
+                    let recognition=new SpeechRecognition();
+                    recognition.lang="ar-AR";
+                    recognition.interimResults;
+                    recognition.addEventListener('result',e=>{
+                        let transcript=Array.from(e.results)
+                        .map(result=>result[0])
+                        .map(result =>result.transcript)
+                        textArea.value += transcript +" ";
+                        console.log(transcript)
+                    })
+                    if(speech){
+                        recognition.start()
+                    }
+                }
+                }
+            </textarea>
+            <button class="btnCopy" type="submit">copy</button>
+            <button class="more-info"><i class="fa-solid fa-circle-info fa-beat-fade"></i></button>
+            <div class="more">
+                <div class="close"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                <audio src="audio/1.mp3" controls></audio>
+            </div>
+        </div>
+    </div>
+    <!-- ===== -->
+</main>
+<!-- =============== END MAIN PAGE =============  -->
+
+<!-- =============== START FOOTER =============  -->
+<footer>
+    <p>Made with <span>MOHAMED</span> SHALASH ...</p>
+</footer>
+<!-- =============== END FOOTER =============  -->
+
+
+    <script src="main.js"></script>
+</body>
+</html>
